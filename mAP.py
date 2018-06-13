@@ -3,7 +3,7 @@ import numpy as np
 sorted_ind = np.argsort(-confidence)
 BB = BB[sorted_ind, :] # predict bounding box coordinates
 image_ids = [image_ids[x] for x in sorted_ind] # get image id of prediction
-                                               #bounding box
+                                               # bounding box
 # retrieve prediction bbox
 nd = len(image_ids)
 tp = np.zeros(nd)
