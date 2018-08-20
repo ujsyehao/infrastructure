@@ -8,7 +8,7 @@
 
 ### mAP calculation for COCO
 
-## tracker logic:
+## tracker logic
 tracks: a list of tracker(custom class)
 
 dets: a list of detection bounding boxs
