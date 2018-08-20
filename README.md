@@ -8,4 +8,14 @@
 
 ### mAP calculation for COCO
 
-## tracker 
+## tracker logic:
+tracks: a list of tracker(custom class)
+
+dets: a list of detection bounding boxs
+* check if tracks is empty
+  * tracks empty -> init tracks
+  * tracks not empyt -> update tracks
+* match tracks and dets
+  * if a tracker match failure, it will preserve **unless it fails many times**
+  * if a detection match failure, it will new a tracker use this detection
+  * if a tracker match success, **it will update use detection and set skippedFrames to 0**
