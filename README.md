@@ -18,4 +18,4 @@ dets: a list of detection bounding boxs
 * match tracks and dets
   * if a tracker match failure, it will preserve **unless it fails more than skippedFrames**
   * if a detection match failure, it will new a tracker use this detection
-  * if a tracker match success, **it will update use detection and set skippedFrames to 0**
+  * if a tracker match success, it will update use correspond detection and **set skippedFrames to 0**
