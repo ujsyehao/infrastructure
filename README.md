@@ -16,6 +16,6 @@ dets: a list of detection bounding boxs
   * tracks empty -> init tracks
   * tracks not empyt -> update tracks
 * match tracks and dets
-  * if a tracker match failure, it will preserve **unless it fails many times**
+  * if a tracker match failure, it will preserve **unless it fails more than skippedFrames**
   * if a detection match failure, it will new a tracker use this detection
   * if a tracker match success, **it will update use detection and set skippedFrames to 0**
