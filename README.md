@@ -1,12 +1,12 @@
 # infrastructure
 
 ## mAP calculation
-### mAP calculation for VOC 
+#### mAP calculation for VOC 
 * use IOU = 0.5(default)
 * use 11 equally sapced recall levels[0, 0.1, 0.2, ..., 1.0]
 * use confidence descending order
 
-### mAP calculation for COCO
+#### mAP calculation for COCO
 
 ## tracker logic
 tracks: a list of tracker(custom class)
