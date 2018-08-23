@@ -19,3 +19,13 @@ dets: a list of detection bounding boxs
   * if a tracker match failure, it will preserve **unless it fails more than skippedFrames**
   * if a detection match failure, it will new a tracker use this detection
   * if a tracker match success, it will update use correspond detection and **set skippedFrames to 0**
+
+## dataset preprocess
+pre-process caffe order
+* convert to single(float32 type)
+* resize image size
+* transpose dimensions to KxHxW
+* reorder channels (color to BGR)
+* scale raw input (from [0, 1] to [0, 255])
+* **subtract mean**
+* **scale feature**
