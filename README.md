@@ -28,7 +28,7 @@ pre-process caffe order
 * reorder channels (color to BGR)
 * scale raw input (from [0, 1] to [0, 255])
 * **subtract mean**
-* **scale feature**
+* **scale feature(divide standard deviation)**
 
 ## post-process
 detection post-process
