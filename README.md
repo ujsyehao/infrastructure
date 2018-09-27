@@ -29,3 +29,10 @@ pre-process caffe order
 * scale raw input (from [0, 1] to [0, 255])
 * **subtract mean**
 * **scale feature**
+
+## post-process
+detection post-process
+* nms series
+  * nms
+  * soft-nms(code provided)
+  * softer-nms(code provided)
