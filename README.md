@@ -14,15 +14,15 @@ tracks: a list of tracker(custom class)
 dets: a list of detection bounding boxs
 * check if tracks is empty
   * tracks empty -> init tracks according to detection results based on the current frame
-  * tracks not empty -> first update tracks(tracker internal update)
+  * tracks not empty -> first update tracks(**tracker internal update**)
 * match tracks and dets
   * if a tracker match failure, it will preserve **unless it fails more than skippedFrames**
   * if a detection match failure, it will new a tracker use this detection
-  * if a tracker match success, it will update use correspond detection(tracker external update) and **set skippedFrames to 0**
+  * if a tracker match success, it will update use correspond detection(**tracker external update**) and **set skippedFrames to 0**
 
 track data structure:
-  * set robust
-  * set trajectory
+  * set robust property
+  * set trajectory property
 
 
 ## dataset preprocess
