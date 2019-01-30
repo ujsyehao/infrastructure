@@ -49,14 +49,17 @@ def cpu_soft_nms(np.ndarray[float, ndim=2] boxes, float sigma = 0.5, float Nt =
         boxes[maxpos,3] = ty2
         boxes[maxpos,4] = ts
 
+	# get coordinates, score of the box with the highest score 
         tx1 = boxes[i,0]
         ty1 = boxes[i,1]
         tx2 = boxes[i,2]
         ty2 = boxes[i,3]
         ts = boxes[i,4]
 
+	# pos initialize to 1 
         pos = i + 1
-	# NMS iterations, note that N changes if detection boxes fall below threshold
+	
+	# iterations, note that N changes if box score < threshold
         while pos < N:
             x1 = boxes[pos, 0]
             y1 = boxes[pos, 1]
