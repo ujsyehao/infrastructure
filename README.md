@@ -16,7 +16,7 @@ dets: a list of detection bounding boxs
   * tracks empty -> init tracks according to detection results based on the current frame
   * tracks not empty -> first update tracks(**tracker internal update**)
 * match tracks and dets
-  * if a tracker match failure, it will preserve **unless it fails more than skippedFrames**
+  * if a tracker match failure, it will preserve **unless it fails more than skippedFrames** -> use (predict + cur)/2 as measure value, do tracker external update
   * if a detection match failure, it will new a tracker use this detection
   * if a tracker match success, it will update use correspond detection(**tracker external update**) and **set skippedFrames to 0**
 
